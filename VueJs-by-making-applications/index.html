@@ -22,7 +22,8 @@
                     </form>
                     <hr>
                     <ul class="list-group">
-                        <li class="list-group-item" v-for='item in items'>
+                        <li class="list-group-item" v-for='(item, index) in items' :key='index'>
+                            <button class="btn btn-sm btn-danger" @click='removeItem(index)'>remove</button>
                             {{item.name}} - <input v-model='item.price'>
                         </li>
                         <li class="list-group-item">Total - {{totalPrice}}</li>

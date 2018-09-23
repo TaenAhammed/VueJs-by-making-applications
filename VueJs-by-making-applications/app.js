@@ -19,6 +19,9 @@ new Vue({
     methods: {
         addItem() {
             this.items.push({ name: this.newItem, price: 0.0 });
+        },
+        removeItem(index) {
+            this.items.splice(index, 1);
         }
     }
 });
